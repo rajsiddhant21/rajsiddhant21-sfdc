@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/resume-sfdc-react/static/css/main.f855e6bc.css",
+    "main.js": "/resume-sfdc-react/static/js/main.d0c6c62d.js",
+    "index.html": "/resume-sfdc-react/index.html",
+    "main.f855e6bc.css.map": "/resume-sfdc-react/static/css/main.f855e6bc.css.map",
+    "main.d0c6c62d.js.map": "/resume-sfdc-react/static/js/main.d0c6c62d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.d0c6c62d.js"
+  ]
+}
