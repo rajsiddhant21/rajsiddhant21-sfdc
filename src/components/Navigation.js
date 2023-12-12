@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 function Navigation() {
     return (
         <div>
-            <ul>
+            <ul className={styles.nav}>
 
             </ul>
         </div>
