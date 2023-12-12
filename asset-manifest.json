@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/rajsiddhant21-sfdc/static/css/main.f855e6bc.css",
-    "main.js": "/rajsiddhant21-sfdc/static/js/main.f2efb831.js",
+    "main.js": "/rajsiddhant21-sfdc/static/js/main.c7b00db2.js",
     "index.html": "/rajsiddhant21-sfdc/index.html",
     "main.f855e6bc.css.map": "/rajsiddhant21-sfdc/static/css/main.f855e6bc.css.map",
-    "main.f2efb831.js.map": "/rajsiddhant21-sfdc/static/js/main.f2efb831.js.map"
+    "main.c7b00db2.js.map": "/rajsiddhant21-sfdc/static/js/main.c7b00db2.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.f2efb831.js"
+    "static/js/main.c7b00db2.js"
   ]
 }
