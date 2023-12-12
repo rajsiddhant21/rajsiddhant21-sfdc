@@ -1,7 +1,9 @@
+import Navigation from "./Navigation"
+
 function Header() {
     return (
         <div>
-            Siddhant Raj - header
+            <Navigation />
         </div>
     )
 }
