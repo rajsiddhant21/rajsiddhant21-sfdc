@@ -1,14 +1,21 @@
 import './App.css';
 import Header from './components/Header';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Navigate, Route, RouterProvider, Routes, createHashRouter } from 'react-router-dom';
 
 function App() {
+
+  const routersO = createHashRouter([
+    {
+      "path": "/",
+      "element": <h1>Home</h1>
+    }
+  ])
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='rajsiddhant21-sfdc/home' element={<h1>Home</h1>}></Route>
-      </Routes>
-    </BrowserRouter>
+    <HashRouter>
+      <RouterProvider
+        router={routersO}></RouterProvider>
+    </HashRouter>
   );
 }
 
