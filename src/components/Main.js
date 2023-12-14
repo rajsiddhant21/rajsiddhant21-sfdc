@@ -1,9 +1,13 @@
+import Body from "./Body"
+import Footer from "./Footer"
 import Header from "./Header"
-
-function Main({ state }) {
+import styles from './Main.module.css'
+function Main({ state, dispatch }) {
     return (
-        <div>
-            <Header />
+        <div className={styles.maincontainer}>
+            <Header state={state} dispatch={dispatch} />
+            <Body state={state} />
+            <Footer />
         </div>
     )
 }

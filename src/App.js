@@ -9,25 +9,24 @@ const tokenurl = `https://login.salesforce.com/services/oauth2/token?username=si
 
 
 function reducer(state, action) {
-  console.log(action);
-  console.log(state)
+  // console.log(action);
+  // console.log(state)
 
   switch (action.type) {
     case 'setstate': {
       return { ...state, ...action.payload }
     }
-
-    case 'getstate': {
-      return { ...action.payload }
+    case 'settab': {
+      return { ...state, ...action.payload }
     }
 
     default:
       throw new Error('Unknown Action')
   }
 }
-
+// PHOTO K PEECHE KA PAPER
 const initialState = {
-
+  activeTab: 'home',
 }
 
 function App() {
@@ -94,7 +93,7 @@ function App() {
 
   return (
     <div>
-      <Main state={state} />
+      <Main state={state} dispatch={dispatch} />
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import Navigation from "./Navigation"
 
-function Header() {
+function Header({ state, dispatch }) {
     return (
         <div>
-            <Navigation />
+            <Navigation state={state} dispatch={dispatch} />
         </div>
     )
 }
