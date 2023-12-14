@@ -1,0 +1,25 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.downloadSpan {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  gap: 3rem;
+}
+.nav li {
+  list-style: none;
+  color: #777;
+  border: 1px solid transparent;
+}
+.nav li:hover {
+  color: black;
+  cursor: pointer;
+}
+.active {
+  color: black !important;
+}

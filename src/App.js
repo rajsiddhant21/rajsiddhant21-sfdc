@@ -1,34 +1,36 @@
 import { useEffect, useReducer } from 'react';
 import './App.css';
 import Header from './components/Header';
+import data from './data.js';
+import Main from './components/Main.js';
 
 
 const tokenurl = `https://login.salesforce.com/services/oauth2/token?username=sid1707raj@empathetic-panda-tmx0kp.com&password=Needasalesforcejob!@%2312356EFK3AsBums8qIWv6IPhWHcR&client_id=3MVG9n_HvETGhr3CqcsKNtCUjlqTSFA6GOMELXkxhn6eawqks641sqCpWa70nX2gGZKAFWqLu2AlUquo7PTa3&client_secret=507B93FF3411DF4351C9C722159FFF1E6D13F370675A4E766206A4C3D160DDAF&grant_type=password`;
 
 
 function reducer(state, action) {
-  console.log(action);
-  console.log(state)
+  // console.log(action);
+  // console.log(state)
 
   switch (action.type) {
     case 'setstate': {
       return { ...state, ...action.payload }
     }
-
-    case 'getstate': {
-      return { ...action.payload }
+    case 'settab': {
+      return { ...state, ...action.payload }
     }
 
     default:
       throw new Error('Unknown Action')
   }
 }
-
+// PHOTO K PEECHE KA PAPER
 const initialState = {
-
+  activeTab: 'home',
 }
 
 function App() {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   // useEffect(function () {
   //   async function token() {
@@ -82,11 +84,16 @@ function App() {
 
   // })
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  useEffect(function () {
+    dispatch({
+      type: 'setstate',
+      payload: data
+    })
+  }, [dispatch])
 
   return (
     <div>
-      Data Incoming
+      <Main state={state} dispatch={dispatch} />
     </div>
   );
 }
