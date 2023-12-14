@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/rajsiddhant21-sfdc/static/css/main.f855e6bc.css",
-    "main.js": "/rajsiddhant21-sfdc/static/js/main.d8f2b93c.js",
+    "main.css": "/rajsiddhant21-sfdc/static/css/main.087ac7e6.css",
+    "main.js": "/rajsiddhant21-sfdc/static/js/main.e65d7d57.js",
     "index.html": "/rajsiddhant21-sfdc/index.html",
-    "main.f855e6bc.css.map": "/rajsiddhant21-sfdc/static/css/main.f855e6bc.css.map",
-    "main.d8f2b93c.js.map": "/rajsiddhant21-sfdc/static/js/main.d8f2b93c.js.map"
+    "main.087ac7e6.css.map": "/rajsiddhant21-sfdc/static/css/main.087ac7e6.css.map",
+    "main.e65d7d57.js.map": "/rajsiddhant21-sfdc/static/js/main.e65d7d57.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.d8f2b93c.js"
+    "static/css/main.087ac7e6.css",
+    "static/js/main.e65d7d57.js"
   ]
 }
