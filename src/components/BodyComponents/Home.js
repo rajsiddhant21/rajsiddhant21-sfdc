@@ -1,6 +1,11 @@
 import { ArrowRight, OpenInNew } from '@mui/icons-material'
 import styles from './Home.module.css';
+import { useEffect } from 'react';
 function Home({ state, dispatch }) {
+
+    useEffect(function () {
+
+    }, [])
 
     function workEx() {
         dispatch({
@@ -9,6 +14,10 @@ function Home({ state, dispatch }) {
                 activeTab: 'workex'
             }
         })
+    }
+
+    function handleEducationScroll(e) {
+        console.log(e)
     }
 
     return (
@@ -38,28 +47,35 @@ function Home({ state, dispatch }) {
                     <p onClick={workEx}><span>Detailed Work Ex.</span> <ArrowRight /></p>
                 </div>
             </div>
-            <div className={styles.college}>
-                <h2>Education - College ({state?.college?.start} - {state?.college?.end})</h2>
-                <p>{state.college?.stream}</p>
-                <p>{state.college?.score}</p>
-                <p>{state.college?.name}</p>
-                <p>{state.college?.location}</p>
+            <div className={styles.relavite + ' ' + styles.educationMain} >
+                <div className={styles.college + ' ' + styles.sticky}>
+                    <h2>Education - College ({state?.college?.start} - {state?.college?.end})</h2>
+                    <p>{state.college?.stream}</p>
+                    <p>{state.college?.score}</p>
+                    <p>{state.college?.name}</p>
+                    <p>{state.college?.location}</p>
+                </div>
+                <div className={styles.school + ' ' + styles.sticky}>
+                    <h2>Education - Intermidiate ({state?.school?.start} - {state?.school?.end})</h2>
+                    <p>{state.school?.stream}</p>
+                    <p>{state.school?.score}</p>
+                    <p>{state.school?.name}</p>
+                    <p>{state.school?.location}</p>
+                </div>
+                <div className={styles.schoolsmall + ' ' + styles.sticky}>
+                    <h2>Education - Schooling ({state?.schoolsmall?.start} - {state?.schoolsmall?.end})</h2>
+                    <p>{state.schoolsmall?.stream}</p>
+                    <p>{state.schoolsmall?.score}</p>
+                    <p>{state.schoolsmall?.name}</p>
+                    <p>{state.schoolsmall?.location}</p>
+                </div>
             </div>
-            <div className={styles.school}>
-                <h2>Education - Intermidiate ({state?.school?.start} - {state?.school?.end})</h2>
-                <p>{state.school?.stream}</p>
-                <p>{state.school?.score}</p>
-                <p>{state.school?.name}</p>
-                <p>{state.school?.location}</p>
+            <div style={{ height: '100px' }}>
+
+                Thankewww
+
             </div>
-            <div className={styles.schoolsmall}>
-                <h2>Education - Schooling ({state?.schoolsmall?.start} - {state?.schoolsmall?.end})</h2>
-                <p>{state.schoolsmall?.stream}</p>
-                <p>{state.schoolsmall?.score}</p>
-                <p>{state.schoolsmall?.name}</p>
-                <p>{state.schoolsmall?.location}</p>
-            </div>
-        </div>
+        </div >
     )
 }
 

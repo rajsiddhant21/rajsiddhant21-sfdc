@@ -22,7 +22,25 @@
   text-align: center;
   text-decoration: underline;
 }
+.educationMain div {
+  border: 1px solid #9c3940;
+  padding: 2px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+}
 .college {
+  top: 8px;
+  background-color: #f9e4d0;
+}
+.school {
+  top: 12px;
+  z-index: 1;
+  background-color: #f9e4d0;
+}
+.schoolsmall {
+  top: 16px;
+  z-index: 2;
+  background-color: #f9e4d0;
 }
 .intro {
   font-family: "Syne", sans-serif;
@@ -57,4 +75,13 @@
 }
 .homeWorkEx div:nth-child(2) p span {
   vertical-align: super;
+}
+.absolute {
+  /* position: absolute; */
+}
+.relavite {
+  /* position: relative; */
+}
+.sticky {
+  position: sticky;
 }
