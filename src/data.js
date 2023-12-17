@@ -26,7 +26,32 @@ const data = {
     "experience1h": "Application Development Senior Analyst\r\nAccenture\r\n12/2022-Current",
     "experience1": "<ul><li>My major work here was to build solutions on experience cloud using salesforce OOB components (less) and custom lightning components (more), I&#39;ve extensively written CSS, JS, Apex classes, Rest Apis, Batch Classes, Triggers, and HTTP callouts. I along with one of my colleagues was able to identify security issues in the system and able to resolve them, I have also helped team members with logic-building and coding problems to meet deliverables</li><li>My Major work here is to design a component skeleton using LWC and implement state management across those components I also worked on integrating Salesforce with two different storage spaces where I transfer files uploaded from salesforce directly to the storage system, I also worked on a POC for Bulk Approval process via apex </li></ul>",
     "cvpdfurl": "https://empathetic-panda-tmx0kp-dev-ed.trailblaze.file.force.com/sfc/dist/version/download/?oid=00D2w00000GWHJ2&ids=0682w00000WDSXE&d=%2Fa%2F2w000001AfhP%2FPRclZqmgEV0n8FV0N2BbkuBEn45DELSiWYBLBY316lU&asPdf=true",
-    "badges": "154"
+    "badges": "154",
+    "points": "161,575",
+    "college": {
+        "stream": "B.Tech Mechanical",
+        "score": "83%",
+        "name": "Kalinga Institute Of Industrial Technology",
+        "location": "Bhubaneswar,Odhisa",
+        "start": "2016",
+        "end": "2020"
+    },
+    "school": {
+        "name": "Sri Chaitanya Vizag",
+        "location": "Vizag,Andhra Pradesh",
+        "score": "87%",
+        "stream": "11-12 CBSE , PCM",
+        "start": "2014",
+        "end": "2016"
+    },
+    "schoolsmall": {
+        "name": "St.Vincent's High School",
+        "location": "Asansol,West Bengal",
+        "score": "87%",
+        "stream": "1-10 ICSE",
+        "start": "TBC",
+        "end": "2014"
+    }
 }
 
 export default data;

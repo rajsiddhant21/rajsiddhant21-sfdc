@@ -3,6 +3,14 @@
   flex-direction: column;
   gap: 1rem;
 }
+.trailhead a {
+  text-decoration: none;
+  color: #333333;
+  display: flex;
+}
+.trailhead li {
+  list-style: none;
+}
 .homeHeader {
   display: flex;
   gap: 10px;
@@ -12,12 +20,16 @@
 }
 .homeHeader h3 {
   text-align: center;
+  text-decoration: underline;
+}
+.college {
 }
 .intro {
   font-family: "Syne", sans-serif;
+  word-break: break-all;
 }
 .homeWorkEx {
-  background-image: url("../../../public/accenture.jpg");
+  background-image: url("../../../public/accenture1.jpg");
   height: 500px;
   width: auto;
   background-size: cover;
@@ -26,15 +38,21 @@
   color: antiquewhite;
   padding-left: 10px;
   display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 .homeWorkEx div {
   flex: 1;
+}
+.homeWorkEx div:nth-child(1) {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 4px;
 }
 .homeWorkEx div:nth-child(2) p {
   cursor: pointer;
   background-color: #333333;
   width: fit-content;
-  padding: 5px;
+  padding: 2px;
   border-radius: 6px;
 }
 .homeWorkEx div:nth-child(2) p span {

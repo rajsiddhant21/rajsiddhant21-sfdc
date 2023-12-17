@@ -1,6 +1,16 @@
-import { ArrowRight } from '@mui/icons-material'
-import styles from './Home.module.css'
-function Home({ state }) {
+import { ArrowRight, OpenInNew } from '@mui/icons-material'
+import styles from './Home.module.css';
+function Home({ state, dispatch }) {
+
+    function workEx() {
+        dispatch({
+            type: 'settab',
+            payload: {
+                activeTab: 'workex'
+            }
+        })
+    }
+
     return (
         <div className={styles.bodyContent}>
             <div className={styles.homeHeader}>
@@ -10,8 +20,13 @@ function Home({ state }) {
                         {state.intro}
                     </span>
                 </div>
-                <div>
+                <div className={styles.trailhead}>
                     <h3>My TrailHead profile</h3>
+                    <ul>
+                        <li><a href={state.trailheadprofile}>Siddhant Raj <OpenInNew /></a> </li>
+                        <li>Badges : {state.badges}</li>
+                        <li>Points : {state.points}</li>
+                    </ul>
                 </div>
             </div>
             <div className={styles.homeWorkEx}>
@@ -20,9 +35,29 @@ function Home({ state }) {
                     <p>{state.accenture}</p>
                 </div>
                 <div>
-                    <p><span>High level work experience</span> <ArrowRight /></p>
-                    <p><span>A little more detail</span> <ArrowRight /></p>
+                    <p onClick={workEx}><span>Detailed Work Ex.</span> <ArrowRight /></p>
                 </div>
+            </div>
+            <div className={styles.college}>
+                <h2>Education - College ({state?.college?.start} - {state?.college?.end})</h2>
+                <p>{state.college?.stream}</p>
+                <p>{state.college?.score}</p>
+                <p>{state.college?.name}</p>
+                <p>{state.college?.location}</p>
+            </div>
+            <div className={styles.school}>
+                <h2>Education - Intermidiate ({state?.school?.start} - {state?.school?.end})</h2>
+                <p>{state.school?.stream}</p>
+                <p>{state.school?.score}</p>
+                <p>{state.school?.name}</p>
+                <p>{state.school?.location}</p>
+            </div>
+            <div className={styles.schoolsmall}>
+                <h2>Education - Schooling ({state?.schoolsmall?.start} - {state?.schoolsmall?.end})</h2>
+                <p>{state.schoolsmall?.stream}</p>
+                <p>{state.schoolsmall?.score}</p>
+                <p>{state.schoolsmall?.name}</p>
+                <p>{state.schoolsmall?.location}</p>
             </div>
         </div>
     )
