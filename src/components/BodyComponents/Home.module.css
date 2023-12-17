@@ -1,0 +1,42 @@
+.bodyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.homeHeader {
+  display: flex;
+  gap: 10px;
+}
+.homeHeader div {
+  flex: 1;
+}
+.homeHeader h3 {
+  text-align: center;
+}
+.intro {
+  font-family: "Syne", sans-serif;
+}
+.homeWorkEx {
+  background-image: url("../../../public/accenture.jpg");
+  height: 500px;
+  width: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: antiquewhite;
+  padding-left: 10px;
+  display: flex;
+}
+.homeWorkEx div {
+  flex: 1;
+}
+.homeWorkEx div:nth-child(2) p {
+  cursor: pointer;
+  background-color: #333333;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 6px;
+}
+.homeWorkEx div:nth-child(2) p span {
+  vertical-align: super;
+}

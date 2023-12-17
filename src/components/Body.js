@@ -7,7 +7,7 @@ import Contact from './BodyComponents/Contact.js';
 function Body({ state }) {
     return (
         <div className={styles.body}>
-            {state.activeTab === 'home' && <Home />}
+            {state.activeTab === 'home' && <Home state={state} />}
             {state.activeTab === 'aboutme' && <AboutMe />}
             {state.activeTab === 'skillsused' && <SkillsUsed />}
             {state.activeTab === 'education' && <Education />}
