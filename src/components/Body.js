@@ -5,6 +5,7 @@ import SkillsUsed from './BodyComponents/SkillsUsed.js';
 import Education from './BodyComponents/Education.js';
 import Contact from './BodyComponents/Contact.js';
 import WorkEx from './BodyComponents/WorkEx.js';
+import DetailedWorkEx from './BodyComponents/DetailedWorkEx.js';
 function Body({ state, dispatch }) {
     return (
         <div className={styles.body}>
@@ -13,7 +14,8 @@ function Body({ state, dispatch }) {
             {state.activeTab === 'skillsused' && <SkillsUsed />}
             {state.activeTab === 'education' && <Education />}
             {state.activeTab === 'contact' && <Contact />}
-            {state.activeTab === 'workex' && <WorkEx />}
+            {state.activeTab === 'workex' && <WorkEx state={state} dispatch={dispatch} />}
+            {state.activeTab === 'detailworkex' && <DetailedWorkEx state={state} />}
         </div>
     )
 }
