@@ -50,9 +50,10 @@
 }
 .skillsline {
   height: 500px;
-  width: 2px;
-  background-color: black;
+  width: 85%;
+  border-left: 1px solid red;
   position: relative;
+  background-color: #f9e4d0;
 }
 .absolute {
   position: absolute;

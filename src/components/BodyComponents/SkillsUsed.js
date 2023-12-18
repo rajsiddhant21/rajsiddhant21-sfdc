@@ -5,48 +5,69 @@ function SkillsUsed() {
     const scrollDropper = useRef(null);
     const skillsLine = useRef(null);
     const marginManager = useRef(null);
+    const skillView = useRef(null);
+    const [clientX, setclientx] = useState(0);
+    const [maxscroll, setmaxscroll] = useState(0);
     const [marginOffset, setmarginOffset] = useState(0);
+    const [widthOffset, setwidthOffset] = useState(0);
     const [scrollActive, setscrollActive] = useState(0);
     function handleScrollDrop(e) {
         e.preventDefault();
-        console.log('target')
-        console.log(e.target)
-        console.log(scrollHolder)
-        //   scrollDropper?.current?.appendChild(scrollHolder.current)
-        console.log(scrollDropper?.current?.classList)
-        scrollDropper?.current?.classList.add(styles.paradyCircle);
-        scrollHolder?.current?.classList.add(styles.hide)
+        // console.log('target')
+        // console.log(e.target)
+        // console.log(scrollHolder)
+        // //   scrollDropper?.current?.appendChild(scrollHolder.current)
+        // console.log(scrollDropper?.current?.classList)
+        // scrollDropper?.current?.classList.add(styles.paradyCircle);
+        // scrollHolder?.current?.classList.add(styles.hide)
     }
     function handleDragStart(e) {
         //e.preventDefault();
     }
     function handleDragEnd(e) {
-
+        //  console.log('end', scrollActive)
     }
     function handleScrollDrag(e) {
+        e.preventDefault();
         scrollHolder?.current?.classList?.add(styles.absolute);
+        setclientx((xlientx) => {
+            return e.clientX;
+        });
+
         setscrollActive((current) => {
-            console.log(e.clientX - marginOffset)
-            if (e.clientX - marginOffset <= 0) {
+            if (clientX - marginOffset <= 0) {
                 return 0;
             }
-            return e.clientX - marginOffset;
+            return clientX - marginOffset;
         })
     }
     function handleDragover(e) {
         e.preventDefault();
     }
     useEffect(function () {
-        console.log(getComputedStyle(marginManager.current));
         setmarginOffset(parseInt(getComputedStyle(marginManager.current).marginLeft));
+    }, [marginManager]);
+
+    useEffect(function () {
+        setwidthOffset(parseInt(getComputedStyle(marginManager.current).width))
     }, [marginManager])
 
     useEffect(function () {
         const ele = scrollHolder.current;
-        ele.style.left = scrollActive + 'px';
+        if (scrollActive >= maxscroll) return;
+        const Pleft = (scrollActive / widthOffset) * 100;
+        ele.style.left = Pleft + '%';
         const skillLine = skillsLine.current;
-        skillLine.style.left = scrollActive + 'px';
+
+        skillLine.style.left = Pleft + '%';
+        // parseInt(getComputedStyle(skillsLine.current).width)
+        skillLine.style.width = (85 - Pleft) + '%';
+
     }, [scrollActive])
+
+    useEffect(function () {
+        setmaxscroll(scrollDropper.current.getBoundingClientRect().left - marginOffset);
+    }, [scrollDropper, marginOffset])
 
     return (
         <div className="body-content">
@@ -64,7 +85,8 @@ function SkillsUsed() {
                 </div>
             </div>
             <div className={styles.skillssection + ' ' + styles.width}>
-                <div className={styles.skillsline} ref={skillsLine}></div>
+                <div className={styles.inlineBlock + ' ' + styles.absolute} ref={skillView}>hidden12</div>
+                <div className={styles.skillsline + ' ' + styles.inlineBlock} ref={skillsLine}></div>
             </div>
         </div>
     )
