@@ -11,7 +11,7 @@ function Body({ state, dispatch }) {
         <div className={styles.body}>
             {state.activeTab === 'home' && <Home state={state} dispatch={dispatch} />}
             {state.activeTab === 'aboutme' && <AboutMe />}
-            {state.activeTab === 'skillsused' && <SkillsUsed />}
+            {state.activeTab === 'skillsused' && <SkillsUsed state={state} />}
             {state.activeTab === 'education' && <Education />}
             {state.activeTab === 'contact' && <Contact />}
             {state.activeTab === 'workex' && <WorkEx state={state} dispatch={dispatch} />}

@@ -47,9 +47,14 @@
   visibility: hidden;
 }
 .skillssection {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.skillssection div {
+  grid-row-start: 1;
+  grid-column-start: 1;
 }
 .skillsline {
-  height: 500px;
   width: 85%;
   border-left: 1px solid red;
   position: relative;
@@ -57,4 +62,14 @@
 }
 .absolute {
   position: absolute;
+}
+.viewSkillBtn {
+  text-align: center;
+}
+.viewSkillBtn span {
+  background-color: rgb(240, 222, 222);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid rgb(206, 113, 113);
 }

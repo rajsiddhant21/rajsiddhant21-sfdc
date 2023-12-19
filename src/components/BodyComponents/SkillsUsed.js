@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './SkillsUsed.module.css'
-function SkillsUsed() {
+function SkillsUsed({ state }) {
     const scrollHolder = useRef(null);
     const scrollDropper = useRef(null);
     const skillsLine = useRef(null);
@@ -11,6 +11,7 @@ function SkillsUsed() {
     const [marginOffset, setmarginOffset] = useState(0);
     const [widthOffset, setwidthOffset] = useState(0);
     const [scrollActive, setscrollActive] = useState(0);
+    const [IntervalId, setIntervalid] = useState(null);
     function handleScrollDrop(e) {
         e.preventDefault();
         // console.log('target')
@@ -28,7 +29,7 @@ function SkillsUsed() {
         //  console.log('end', scrollActive)
     }
     function handleScrollDrag(e) {
-        e.preventDefault();
+        e?.preventDefault();
         scrollHolder?.current?.classList?.add(styles.absolute);
         setclientx((xlientx) => {
             return e.clientX;
@@ -44,6 +45,16 @@ function SkillsUsed() {
     function handleDragover(e) {
         e.preventDefault();
     }
+    function handleViewSkill() {
+        if (IntervalId) {
+            return;
+        }
+        const intID = setInterval(() => {
+            console.log('going')
+            setscrollActive((x) => x + 1);
+        }, 1);
+        setIntervalid(intID);
+    }
     useEffect(function () {
         setmarginOffset(parseInt(getComputedStyle(marginManager.current).marginLeft));
     }, [marginManager]);
@@ -54,16 +65,17 @@ function SkillsUsed() {
 
     useEffect(function () {
         const ele = scrollHolder.current;
-        if (scrollActive >= maxscroll) return;
+        if (scrollActive >= maxscroll) {
+            clearInterval(IntervalId);
+            return
+        }
         const Pleft = (scrollActive / widthOffset) * 100;
         ele.style.left = Pleft + '%';
         const skillLine = skillsLine.current;
-
         skillLine.style.left = Pleft + '%';
-        // parseInt(getComputedStyle(skillsLine.current).width)
         skillLine.style.width = (85 - Pleft) + '%';
 
-    }, [scrollActive])
+    }, [scrollActive, maxscroll, widthOffset, IntervalId])
 
     useEffect(function () {
         setmaxscroll(scrollDropper.current.getBoundingClientRect().left - marginOffset);
@@ -71,6 +83,9 @@ function SkillsUsed() {
 
     return (
         <div className="body-content">
+            <div className={styles.viewSkillBtn}>
+                <span onClick={handleViewSkill}>View Skill</span>
+            </div>
             <div className={styles.scrollContainer + ' ' + styles.width} ref={marginManager}>
                 <div ref={scrollHolder} className={styles.scrollholder + ' ' + styles.inlineBlock} draggable="true"
                     onDragStart={handleDragStart}
@@ -85,10 +100,30 @@ function SkillsUsed() {
                 </div>
             </div>
             <div className={styles.skillssection + ' ' + styles.width}>
-                <div className={styles.inlineBlock + ' ' + styles.absolute} ref={skillView}>hidden12</div>
+                <div className={styles.inlineBlock + ' '} ref={skillView}>
+                    <SkillsList state={state} />
+                </div>
                 <div className={styles.skillsline + ' ' + styles.inlineBlock} ref={skillsLine}></div>
             </div>
         </div>
+    )
+}
+
+function SkillsList({ state }) {
+    console.log(state.skills)
+    return (
+        <div>
+            {state?.skills?.map(x => {
+                return <Skill key={x} name={x} />
+            })}
+        </div>
+    )
+}
+
+
+function Skill({ name }) {
+    return (
+        <p>{name}</p>
     )
 }
 
