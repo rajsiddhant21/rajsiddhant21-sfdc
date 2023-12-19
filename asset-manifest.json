@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/rajsiddhant21-sfdc/static/css/main.58bc506f.css",
-    "main.js": "/rajsiddhant21-sfdc/static/js/main.48128ba4.js",
+    "main.js": "/rajsiddhant21-sfdc/static/js/main.69d4188e.js",
     "static/media/sfdc5.jpg": "/rajsiddhant21-sfdc/static/media/sfdc5.8d28c30fac5ba56e5647.jpg",
     "static/media/accenture1.jpg": "/rajsiddhant21-sfdc/static/media/accenture1.c897948e00494439458f.jpg",
     "static/media/sfdc4.jpg": "/rajsiddhant21-sfdc/static/media/sfdc4.744205d7c27d564f6d64.jpg",
     "static/media/sfdc2.jpg": "/rajsiddhant21-sfdc/static/media/sfdc2.91783823be38d1229a73.jpg",
     "index.html": "/rajsiddhant21-sfdc/index.html",
     "main.58bc506f.css.map": "/rajsiddhant21-sfdc/static/css/main.58bc506f.css.map",
-    "main.48128ba4.js.map": "/rajsiddhant21-sfdc/static/js/main.48128ba4.js.map"
+    "main.69d4188e.js.map": "/rajsiddhant21-sfdc/static/js/main.69d4188e.js.map"
   },
   "entrypoints": [
     "static/css/main.58bc506f.css",
-    "static/js/main.48128ba4.js"
+    "static/js/main.69d4188e.js"
   ]
 }
