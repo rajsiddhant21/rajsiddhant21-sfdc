@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import styles from './SkillsUsed.module.css'
+import styles from './SkillsUsed.module.css';
+import { LinearProgress } from '@mui/material';
 function SkillsUsed({ state }) {
     const scrollHolder = useRef(null);
     const scrollDropper = useRef(null);
@@ -114,16 +115,20 @@ function SkillsList({ state }) {
     return (
         <div>
             {state?.skills?.map(x => {
-                return <Skill key={x} name={x} />
+                return <Skill key={x.name} skill={x} />
             })}
         </div>
     )
 }
 
 
-function Skill({ name }) {
+function Skill({ skill }) {
     return (
-        <p>{name}</p>
+        <div className={styles.indSkill}>
+            <p><span>{skill.name}</span>  <span>
+                <LinearProgress variant="determinate" value={skill.value} />
+            </span></p>
+        </div>
     )
 }
 

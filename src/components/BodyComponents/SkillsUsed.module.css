@@ -49,10 +49,12 @@
 .skillssection {
   display: grid;
   grid-template-columns: 1fr;
+  width: 80%;
 }
 .skillssection div {
   grid-row-start: 1;
   grid-column-start: 1;
+  width: 80%;
 }
 .skillsline {
   width: 85%;
@@ -72,4 +74,6 @@
   border-radius: 5px;
   cursor: pointer;
   border: 1px solid rgb(206, 113, 113);
+}
+.indSkill span {
 }
