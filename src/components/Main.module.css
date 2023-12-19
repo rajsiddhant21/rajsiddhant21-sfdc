@@ -1,3 +1,11 @@
 .maincontainer {
-  padding: 5px 1rem;
+  padding: 1rem;
+  background-color: #fbe7e0;
+  min-height: 100vh;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
 }

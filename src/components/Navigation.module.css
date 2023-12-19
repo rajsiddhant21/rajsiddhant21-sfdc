@@ -2,10 +2,13 @@
   display: flex;
   justify-content: space-between;
   padding: 5px 10px;
+  flex-wrap: wrap;
 }
 .downloadSpan {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  flex-wrap: wrap;
 }
 .nav {
   display: flex;

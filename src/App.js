@@ -2,6 +2,7 @@ import { useEffect, useReducer } from 'react';
 import './App.css';
 import Header from './components/Header';
 import data from './data.js';
+import datalocal from './datalocal.js';
 import Main from './components/Main.js';
 
 
@@ -26,7 +27,8 @@ function reducer(state, action) {
 }
 // PHOTO K PEECHE KA PAPER
 const initialState = {
-  activeTab: 'home',
+  activeTab: 'detailworkex',
+  subtab: ''
 }
 
 function App() {
@@ -87,7 +89,7 @@ function App() {
   useEffect(function () {
     dispatch({
       type: 'setstate',
-      payload: data
+      payload: { ...data, ...datalocal }
     })
   }, [dispatch])
 
