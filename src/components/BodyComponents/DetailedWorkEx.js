@@ -40,7 +40,7 @@ function WorkExDesc({ state, project }) {
     }
     return (<>
         <div className={styles.workDesc}>
-            <WorkExSingle desckey={teamkey} state={state[project]} />
+            {state && <WorkExSingle desckey={teamkey} state={state[project]} />}
         </div>
         <div>
             <Pagination maxPage={MaxPage} active={activePage} setActive={setactivePage} />
