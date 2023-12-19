@@ -4,4 +4,19 @@
 }
 .detailedWorkex span {
   cursor: pointer;
+  animation-duration: 0.7s;
+  animation-name: blinkLink;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes blinkLink {
+  0% {
+    color: green;
+  }
+  100% {
+    color: red;
+  }
 }
