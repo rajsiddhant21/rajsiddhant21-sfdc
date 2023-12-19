@@ -15,7 +15,7 @@ function reducer(state, action) {
 
   switch (action.type) {
     case 'setstate': {
-      return { ...state, ...action.payload }
+      return { ...state, ...action.payload, stateactive: true }
     }
     case 'settab': {
       return { ...state, ...action.payload }
@@ -28,7 +28,8 @@ function reducer(state, action) {
 // PHOTO K PEECHE KA PAPER
 const initialState = {
   activeTab: 'detailworkex',
-  subtab: ''
+  subtab: '',
+  stateactive: false,
 }
 
 function App() {
@@ -95,7 +96,7 @@ function App() {
 
   return (
     <div>
-      <Main state={state} dispatch={dispatch} />
+      {state.stateactive && <Main state={state} dispatch={dispatch} />}
     </div>
   );
 }

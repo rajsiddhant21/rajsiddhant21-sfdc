@@ -32,7 +32,7 @@ function WorkExDesc({ state, project }) {
     let MaxPage = 1;
     let teamkey = '';
     const [activePage, setactivePage] = useState(1);
-    if (state[project]) {
+    if (state && state[project]) {
         MaxPage = Object.getOwnPropertyNames(state[project]).length
     }
     if (activePage) {
