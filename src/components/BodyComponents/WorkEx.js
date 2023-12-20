@@ -54,15 +54,15 @@ function HighLevelTile({ state, keyexp, keyexph }) {
                 //      console.log(localScroll, window.scrollY);
                 if (localScroll < window.scrollY) {
                     console.log('down')
-                    // const styleDates = getComputedStyle(datesExp.current);
-                    // console.log(styleDates)
-                    // //styleDates.transform = `translateY(${20}px)`;
-                    // console.log(styleDates.transform)
+                    const styleDates = getComputedStyle(datesExp.current);
+                    console.log(styleDates)
+                    //styleDates.transform = `translateY(${20}px)`;
+                    console.log(styleDates.transform)
                     if (datesExp.current)
                         datesExp.current.style.transform = `translateY(${25}px)`;
                 } else {
                     if (datesExp.current)
-                        datesExp.current.style.transform = `translateY(-${25}px)`;
+                        datesExp.current.style.transform = `translateY(-${35}px)`;
                 }
                 localScroll = window.scrollY;
             }, 10)
