@@ -8,7 +8,7 @@ import Main from './components/Main.js';
 
 const tokenurl = `https://login.salesforce.com/services/oauth2/token?username=sid1707raj@empathetic-panda-tmx0kp.com&password=Needasalesforcejob!@%2312356EFK3AsBums8qIWv6IPhWHcR&client_id=3MVG9n_HvETGhr3CqcsKNtCUjlqTSFA6GOMELXkxhn6eawqks641sqCpWa70nX2gGZKAFWqLu2AlUquo7PTa3&client_secret=507B93FF3411DF4351C9C722159FFF1E6D13F370675A4E766206A4C3D160DDAF&grant_type=password`;
 
-
+let counter = 0;
 function reducer(state, action) {
   // console.log(action);
   // console.log(state)
@@ -20,6 +20,13 @@ function reducer(state, action) {
     case 'settab': {
       return { ...state, ...action.payload }
     }
+    case 'setscroll': {
+      if (state.scroll < action.payload.scroll) {
+        return { ...state, ...action.payload, scrolldirection: 'down' }
+      } else {
+        return { ...state, ...action.payload, scrolldirection: 'up' }
+      }
+    }
 
     default:
       throw new Error('Unknown Action')
@@ -27,9 +34,11 @@ function reducer(state, action) {
 }
 // PHOTO K PEECHE KA PAPER
 const initialState = {
-  activeTab: 'home',
+  activeTab: 'workex',
   subtab: '',
   stateactive: false,
+  scroll: 0,
+  scrolldirection: '',
 }
 
 function App() {
@@ -94,6 +103,7 @@ function App() {
     })
   }, [dispatch])
 
+  console.log(counter++);
   return (
     <div>
       {state.stateactive && <Main state={state} dispatch={dispatch} />}
