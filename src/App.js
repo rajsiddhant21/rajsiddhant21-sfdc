@@ -34,7 +34,7 @@ function reducer(state, action) {
 }
 // PHOTO K PEECHE KA PAPER
 const initialState = {
-  activeTab: 'workex',
+  activeTab: 'skillsused',
   subtab: '',
   stateactive: false,
   scroll: 0,

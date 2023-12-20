@@ -47,17 +47,14 @@ function HighLevelTile({ state, keyexp, keyexph }) {
     useEffect(function () {
         let timerid = null;
         let localScroll = -1;
-        window.addEventListener('scroll', () => {
+        const scrollHandler = () => {
             //    console.log(timerid)
+
             clearTimeout(timerid)
             timerid = setTimeout(() => {
                 //      console.log(localScroll, window.scrollY);
                 if (localScroll < window.scrollY) {
-                    console.log('down')
-                    const styleDates = getComputedStyle(datesExp.current);
-                    console.log(styleDates)
                     //styleDates.transform = `translateY(${20}px)`;
-                    console.log(styleDates.transform)
                     if (datesExp.current)
                         datesExp.current.style.transform = `translateY(${25}px)`;
                 } else {
@@ -66,11 +63,18 @@ function HighLevelTile({ state, keyexp, keyexph }) {
                 }
                 localScroll = window.scrollY;
             }, 10)
-        })
+        }
+        window.addEventListener('scroll', scrollHandler)
+        return () => {
+            window.removeEventListener('scroll', scrollHandler)
+        }
+    }, [])
+
+    useEffect(function () {
         return () => {
 
         }
-    }, [])
+    })
 
     return (
         <div className={styles.tile}>

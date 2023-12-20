@@ -24,5 +24,5 @@
   cursor: pointer;
 }
 .active {
-  color: black !important;
+  color: red !important;
 }

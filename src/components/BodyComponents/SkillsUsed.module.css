@@ -1,4 +1,4 @@
-.width {
+/* .width {
   margin: 0 auto;
   width: 85%;
 }
@@ -76,4 +76,38 @@
   border: 1px solid rgb(206, 113, 113);
 }
 .indSkill span {
+} */
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  min-height: 80vh;
+  grid-gap: 1rem;
+}
+.skillSet1 {
+  display: flex;
+  align-items: center;
+}
+.skillSet1Inner {
+  height: 300px;
+  width: 300px;
+  border: 1px solid;
+  border-radius: 50%;
+}
+.skillSet2 {
+}
+.skillPoster {
+  background-image: url("../../../public/skills.jpg");
+  background-size: 6%;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: center;
+}
+.skillPoster div {
+  background-color: rgb(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+.indSkill {
+  display: inline-block;
 }
