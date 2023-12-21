@@ -51,8 +51,11 @@ function SkillsList({ state }) {
         <div className={styles.skillsContainer}>
             <div className={styles.skillSet1} ref={skills1}>
                 {
-                    state?.skills?.map(x => {
-                        return <Skill key={x.name} skill={x} />
+                    state?.skills?.map((x, i) => {
+                        if (i <= breakPoint) {
+                            return <Skill key={x.name} skill={x} />
+                        }
+
                     })
                 }
             </div>

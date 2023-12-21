@@ -8,14 +8,12 @@ const datalocal = {
         "team5": `Worked on Writing a batch Class for Opportunity Creation in backward flow based on certain conditions from a custom Object`,
     },
     "project2": {
-        "team1": `
-        Salesconnect - will write
+        "team1": `I played a key role in the Sales Connect project, where we brought an existing system into the Experience Cloud. My main responsibilities included creating and managing four different Objects, setting up their fields and profiles, and establishing validation rules. I also designed a trigger framework and implemented validation using triggers.In addition to this, I worked on out-of-the-box components in the Experience Cloud, wrote batch classes, and developed an API known as the authorization service. With my team, I found a solution for admin users to share images from the library with community users, created an automated process for generating authenticated URLs, and implemented Telium tagging to track user interactions on the website.Furthermore, I made the components mobile-responsive, added a light/dark theme to the site homepage, and wrote extensive code in CSS, JS, and Apex. I also provided CSS support to stakeholders' developers.
+        
         `
     },
     "project3": {
-        "team1": `
-        CMS - will write
-        `
+        "team1": `Teaming up with a developer, we launched this project with a thorough analysis of the existing system. My role centered around communicating with various teams about the planned APIs and collaborating with businesses to refine project stories. I designed a comprehensive low-level component framework using Lightning Web Components (LWC), comprising around 11 to 12 components. One significant achievement was enabling the seamless upload of media binary files from Salesforce to another server, particularly storage spaces. Alongside coding in JavaScript and Apex, I conducted multiple Proof of Concepts (POCs) with diverse teams to ensure smooth communication between systems. Additionally, I played a supportive role in getting new team members upto speed. Currently, my focus is on defining the lifecycle that the records will undergo depending the the logged In user role.`
     }
 }
 

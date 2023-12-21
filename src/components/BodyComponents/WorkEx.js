@@ -21,6 +21,12 @@ function WorkEx({ state, dispatch }) {
                 These are the high level work experience.
                 <span onClick={handleDetailedWorkex}>(Find Detailed One Here)</span>
             </h2>
+            <div className={state.workachievements}>
+                <h3>Some Work Highlights</h3>
+                <p>
+                    <ListAchievements state={state} />
+                </p>
+            </div>
             <div className={styles.experience1}>
                 <HighLevelTile state={state} keyexp="experience1" keyexph="experience1h" />
             </div>
@@ -29,12 +35,6 @@ function WorkEx({ state, dispatch }) {
             </div>
             <div className={styles.experience3}>
                 <HighLevelTile state={state} keyexp="experience3" keyexph="experience3h" />
-            </div>
-            <div className={state.workachievements}>
-                <h3>Some Work Highlights</h3>
-                <p>
-                    {parse(state.workachievements)}
-                </p>
             </div>
         </div>
     )
@@ -87,11 +87,22 @@ function HighLevelTile({ state, keyexp, keyexph }) {
     )
 }
 
-function Achievements({ state, key }) {
+function ListAchievements({ state }) {
+    const listAch = state.workachievements.split(';;')
     return (
         <div>
-
+            {listAch.map(x => {
+                return <Achievements ach={x} />
+            })}
         </div>
+    )
+}
+
+function Achievements({ ach }) {
+    return (
+        <>
+            <p className={styles.achInd}>{ach}</p>
+        </>
     )
 }
 

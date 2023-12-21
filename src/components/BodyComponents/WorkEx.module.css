@@ -39,6 +39,11 @@
   transform: translateY(0px);
   transition: transform 0.6s;
 }
+.achInd {
+  background-color: #0c1446;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
 @keyframes blinkLink {
   0% {
     color: green;
