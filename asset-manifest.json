@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/rajsiddhant21-sfdc/static/css/main.c34684d9.css",
-    "main.js": "/rajsiddhant21-sfdc/static/js/main.cebb0e06.js",
+    "main.css": "/rajsiddhant21-sfdc/static/css/main.f84a0f86.css",
+    "main.js": "/rajsiddhant21-sfdc/static/js/main.a1d86c4c.js",
     "static/media/sfdc5.jpg": "/rajsiddhant21-sfdc/static/media/sfdc5.8d28c30fac5ba56e5647.jpg",
     "static/media/skills.jpg": "/rajsiddhant21-sfdc/static/media/skills.102b50e2a14e62367c44.jpg",
     "static/media/accenture1.jpg": "/rajsiddhant21-sfdc/static/media/accenture1.c897948e00494439458f.jpg",
+    "static/media/sfdc3.jpg": "/rajsiddhant21-sfdc/static/media/sfdc3.97f7990ff81bccc7b285.jpg",
     "static/media/sfdc4.jpg": "/rajsiddhant21-sfdc/static/media/sfdc4.744205d7c27d564f6d64.jpg",
     "static/media/sfdc2.jpg": "/rajsiddhant21-sfdc/static/media/sfdc2.91783823be38d1229a73.jpg",
     "index.html": "/rajsiddhant21-sfdc/index.html",
-    "main.c34684d9.css.map": "/rajsiddhant21-sfdc/static/css/main.c34684d9.css.map",
-    "main.cebb0e06.js.map": "/rajsiddhant21-sfdc/static/js/main.cebb0e06.js.map"
+    "main.f84a0f86.css.map": "/rajsiddhant21-sfdc/static/css/main.f84a0f86.css.map",
+    "main.a1d86c4c.js.map": "/rajsiddhant21-sfdc/static/js/main.a1d86c4c.js.map"
   },
   "entrypoints": [
-    "static/css/main.c34684d9.css",
-    "static/js/main.cebb0e06.js"
+    "static/css/main.f84a0f86.css",
+    "static/js/main.a1d86c4c.js"
   ]
 }
