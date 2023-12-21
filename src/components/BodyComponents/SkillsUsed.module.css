@@ -1,4 +1,4 @@
-.width {
+/* .width {
   margin: 0 auto;
   width: 85%;
 }
@@ -76,4 +76,49 @@
   border: 1px solid rgb(206, 113, 113);
 }
 .indSkill span {
+} */
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  min-height: 80vh;
+  grid-gap: 1rem;
+}
+.skillSet1 {
+}
+.skillSet2 {
+}
+.skillPoster {
+  background-image: url("../../../public/skills.jpg");
+  background-size: 6%;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: center;
+}
+.otherSkills {
+  background-color: rgb(0, 0, 0, 0.2);
+  height: 100%;
+}
+
+.indSkill {
+  margin: 2rem 0;
+}
+.progressBar {
+  color: #c8f4f9;
+}
+.otherSKillsBtn {
+  margin: 0;
+  text-align: center;
+  background-color: #2f2440;
+  color: #bfcad0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.otherSkillsDisplay {
+  visibility: hidden;
+}
+.otherSkillsDisplayActive {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.8);
 }

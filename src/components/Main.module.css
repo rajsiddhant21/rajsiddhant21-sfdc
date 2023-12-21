@@ -1,6 +1,6 @@
 .maincontainer {
   padding: 1rem;
-  background-color: #fbe7e0;
+  background-color: #0a0708;
   min-height: 100vh;
   height: fit-content;
   position: relative;
@@ -8,4 +8,6 @@
   flex-direction: column;
   gap: 2rem;
   box-sizing: border-box;
+  color: #eeede7;
+  font-size: 18px;
 }
