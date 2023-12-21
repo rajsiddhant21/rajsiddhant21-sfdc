@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import styles from './DetailedWorkEx.module.css'
 import Pagination from './Pagination'
 function DetailedWorkEx({ state }) {
-    let ht = 0.7 * (window.innerHeight)
+    let ht = 0.4 * (window.innerHeight)
     return (
         <div className={styles.workexdetail}>
             <div className={styles.workexdesc}>
