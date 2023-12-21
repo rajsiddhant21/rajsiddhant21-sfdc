@@ -16,13 +16,13 @@
 }
 .nav li {
   list-style: none;
-  color: #777;
+  color: #f5f5f5;
   border: 1px solid transparent;
 }
 .nav li:hover {
-  color: black;
+  color: #d3bbdd;
   cursor: pointer;
 }
 .active {
-  color: red !important;
+  color: #c26dbc !important;
 }

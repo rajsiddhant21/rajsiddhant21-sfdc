@@ -16,9 +16,16 @@ const data = {
         { "name": "Validation Rules", value: 60, color: "red" },
         { "name": "Recursion", value: 60, color: "red" },
         { "name": "Telium Tagging", value: 35, color: "#F2EDE9" },
-        { "name": "Deployments", value: 60, color: "#F1B416" },
-        { "name": "React", value: 30, color: "#DA746F" },
+        { "name": "Deployments", value: 60, color: "#F1B416" }
     ],
+    "otherskills":
+        [
+            { "name": "React", value: 50, color: "#DA746F" },
+            { "name": "Node Js (Express)", value: 45, color: "#DA746F" },
+            { "name": "Java", value: 30, color: "#DA746F" },
+            { "name": "C++", value: 30, color: "#DA746F" },
+        ]
+    ,
     "intro": "A Salesforce Developer with 3 years of work experience in SFDC\r\nLightning with programmatic approaches such as Apex, Triggers,\r\nLightning Components (Aura and LWC), Rest Apis, and custom\r\nJavascript library, I regularly write code in an optimized manner\r\nkeeping the Salesforce governor limit checked, I have worked on\r\nSales Cloud, currently working on Experience Cloud, I have been\r\npart of 7 teams, and can quickly adapt to business\r\nrequirements, I have been part of 13 successful releases and have\r\ndelivered 80+ user stories to Production, I sometimes solve\r\nProblems in C++ to keep my logic building strong which\r\neventually helps me develop business requirements faster.",
     "experience3h": "Application Development Associate\r\nAccenture\r\n10/2020-11/2021",
     "experience3": "<ul><li>I mainly worked on building a console navigation system in a console application and a Rest API class. </li><li>I mainly worked on Aura components and a few defect fixes. </li><li>My major work here was to build two rest API classes that would give the third-party application the detail requested. </li><li>My Major role here was to build a very complex logic that would calculate user inputs based on 3-4 screens of input and then run an algorithm to produce a result, it was done using screen flows and apex classes, I also used vf pages, lwc components and apex programming.</li></ul>",

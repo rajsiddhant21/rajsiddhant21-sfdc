@@ -14,6 +14,7 @@ function SkillsList({ state }) {
     const skillsLen = state.skills.length;
     let breakPoint = -1;
     const skills1 = useRef(null);
+    const otherSkillDisplay = useRef(null);
 
     // useEffect(function () {
     //     const canvas = document.querySelector(`canvas`);
@@ -34,21 +35,44 @@ function SkillsList({ state }) {
         breakPoint = skillsLen / 2;
     }
 
+    function handleOtherSkillSection() {
+        if (!otherSkillDisplay.current) return;
+        const ele = otherSkillDisplay.current;
+        console.log(ele.classList)
+        if (ele.className === (styles.otherSkillsDisplay)) {
+            ele.className = styles.otherSkillsDisplayActive;
+        } else if (ele.className === (styles.otherSkillsDisplayActive)) {
+            ele.className = styles.otherSkillsDisplay;
+        }
+        console.log(ele.className)
+    }
+
     return (
         <div className={styles.skillsContainer}>
             <div className={styles.skillSet1} ref={skills1}>
-
+                {
+                    state?.skills?.map(x => {
+                        return <Skill key={x.name} skill={x} />
+                    })
+                }
             </div>
             <div className={styles.skillPoster}>
-                <div>
-
+                <div className={styles.otherSkills}>
+                    <p className={styles.otherSKillsBtn} onClick={handleOtherSkillSection}>Other Used Skills</p>
+                    <div className={styles.otherSkillsDisplay} ref={otherSkillDisplay}>
+                        {
+                            state?.otherskills?.map(x => {
+                                return <OtherSkills key={x.name} skill={x} />
+                            })
+                        }
+                    </div>
                 </div>
             </div>
             <div className={styles.skillSet2}>
                 {
                     state.skills.map((x, i) => {
                         if (i > breakPoint) {
-                            return <Skill skill={x} />
+                            return <Skill skill={x} key={x.name} />
                         }
 
                     })
@@ -62,9 +86,25 @@ function SkillsList({ state }) {
 function Skill({ skill }) {
     return (
         <div className={styles.indSkill}>
-            <p><span>{skill.name}</span>  <span>
-                {/* <LinearProgress variant="determinate" value={skill.value} /> */}
-            </span></p>
+            <p>
+                <span>{skill.name}</span>
+                <span className={styles.progressBar}>
+                    <LinearProgress variant="determinate" value={skill.value} color="inherit" />
+                </span>
+            </p>
+        </div>
+    )
+}
+
+function OtherSkills({ skill }) {
+    return (
+        <div className={styles.a}>
+            <p>
+                <span>{skill.name}</span>
+                <span className={styles.progressBar}>
+                    <LinearProgress variant="determinate" value={skill.value} color="inherit" />
+                </span>
+            </p>
         </div>
     )
 }
@@ -117,8 +157,3 @@ function Skill({ skill }) {
 export default SkillsUsed
 
 
-// {
-//     state?.skills?.map(x => {
-//         return <Skill key={x.name} skill={x} />
-//     })
-// }

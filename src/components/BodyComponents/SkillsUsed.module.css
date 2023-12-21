@@ -85,14 +85,6 @@
   grid-gap: 1rem;
 }
 .skillSet1 {
-  display: flex;
-  align-items: center;
-}
-.skillSet1Inner {
-  height: 300px;
-  width: 300px;
-  border: 1px solid;
-  border-radius: 50%;
 }
 .skillSet2 {
 }
@@ -103,11 +95,30 @@
   background-repeat: repeat;
   background-position: center;
 }
-.skillPoster div {
-  background-color: rgb(0, 0, 0, 0.5);
+.otherSkills {
+  background-color: rgb(0, 0, 0, 0.2);
   height: 100%;
 }
 
 .indSkill {
-  display: inline-block;
+  margin: 2rem 0;
+}
+.progressBar {
+  color: #c8f4f9;
+}
+.otherSKillsBtn {
+  margin: 0;
+  text-align: center;
+  background-color: #2f2440;
+  color: #bfcad0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.otherSkillsDisplay {
+  visibility: hidden;
+}
+.otherSkillsDisplayActive {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.8);
 }
