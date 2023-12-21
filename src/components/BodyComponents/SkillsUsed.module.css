@@ -114,6 +114,11 @@
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 2px 2px 2px 2px #fff;
+}
+.otherSKillsBtn:active {
+  color: #c26dbc;
+  box-shadow: none;
 }
 .otherSkillsDisplay {
   visibility: hidden;
@@ -121,4 +126,6 @@
 .otherSkillsDisplayActive {
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
 }

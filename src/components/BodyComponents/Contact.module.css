@@ -15,6 +15,11 @@
   gap: 1rem;
   font-family: "Kanit", sans-serif;
 }
-.phone svg {
+.phone svg,
+.linkdein svg {
+  vertical-align: middle;
+}
+.linkdein a {
+  color: inherit;
   vertical-align: middle;
 }

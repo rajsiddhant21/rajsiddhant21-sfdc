@@ -1,10 +1,10 @@
 const data = {
-    "workachievements": "<ul><li>I found the solution to achieve Telium tagging for experienced cloud users, so their movements can be tracked and reports can be generated of their actions on the website.</li><li>Implemented light and dark themes on the landing page of the site, including variations based on audience.</li><li>I took ownership of developing and testing a component a few hours before Go Live and completed it, however, later the story got deferred but the component at that given time was production-ready.</li><li>I took ownership to change the design of a component overnight before the Go Live.</li><li>I was able to optimize an API to avoid the heap size exception limit in salesforce due to a higher volume of the inflowing data.</li><li>I was able to write a batch class for different projects along with working on my current project.</li></ul>",
+    "workachievements": `I found the solution to achieve Telium tagging for experienced cloud users, so their movements can be tracked and reports can be generated of their actions on the website.;;Implemented light and dark themes on the landing page of the site, including variations based on audience.;;I took ownership of developing and testing a component a few hours before Go Live and completed it, however, later the story got deferred but the component at that given time was production-ready.;;I took ownership to change the design of a component overnight before the Go Live.;;I was able to optimize an API to avoid the heap size exception limit in salesforce due to a higher volume of the inflowing data.;;I was able to write a batch class for different projects along with working on my current project on multiple occasions.`,
     "trailheadprofile": "https://www.salesforce.com/trailblazer/rajsiddhant",
     "skills": [
-        { "name": "Apex & Async Apex", value: 50, color: "red" },
-        { "name": "Rest API", value: 60, color: "yellow" },
-        { "name": "HTTP Callouts", value: 65, color: "green" },
+        { "name": "Apex & Async Apex", value: 70, color: "red" },
+        { "name": "Rest API", value: 65, color: "yellow" },
+        { "name": "HTTP Callouts", value: 63, color: "green" },
         { "name": "Triggers", value: 70, color: "orange" },
         { "name": "HTML, CSS, Scss", value: 75, color: "pink" },
         { "name": "Lightning Components", value: 70, color: "blue" },
