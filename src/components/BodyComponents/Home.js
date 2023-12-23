@@ -73,11 +73,6 @@ function Home({ state, dispatch }) {
                     <p>{state.schoolsmall?.location}</p>
                 </div>
             </div>
-            <div style={{ height: '100px' }}>
-
-                Thankewww
-
-            </div>
         </div >
     )
 }

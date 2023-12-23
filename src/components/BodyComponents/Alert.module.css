@@ -1,0 +1,30 @@
+.alert {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 10px;
+  border-radius: 10px;
+  animation-name: downloadalert;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-direction: alternate-reverse;
+  color: #333;
+}
+.alert span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@keyframes downloadalert {
+  0% {
+    background-color: #00bceb;
+  }
+  50% {
+    background-color: #6abf4b;
+  }
+  100% {
+    background-color: #ffcc00;
+  }
+}

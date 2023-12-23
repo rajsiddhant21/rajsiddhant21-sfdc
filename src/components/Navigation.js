@@ -67,14 +67,14 @@ function Navigation({ state, dispatch }) {
                     <span></span>
                 </div>
                 {mobileMenu && <div className={styles.menuOpen}>
-                    {<MobileNavItemns onhandleTabChange={handleTabChange} state={state} />}
+                    {<MobileNavItemns onhandleTabChange={handleTabChange} ononhandleDownloadCv={handleDownloadCv} state={state} />}
                 </div>}
             </div>
         </>
     )
 }
 
-function MobileNavItemns({ onhandleTabChange, state }) {
+function MobileNavItemns({ onhandleTabChange, state, onhandleDownloadCv }) {
     return (
         <>
             <ul onClick={onhandleTabChange}>
@@ -84,6 +84,7 @@ function MobileNavItemns({ onhandleTabChange, state }) {
                 <li data-tabname="skillsused" className={state.activeTab === 'skillsused' ? styles.active : ''}>Skills Used</li>
                 {/* <li data-tabname="education" className={state.activeTab === 'education' ? styles.active : ''}>Education</li> */}
                 <li data-tabname="contact" className={state.activeTab === 'contact' ? styles.active : ''}>Contact</li>
+                <li><span className={styles.downloadSpan} onClick={onhandleDownloadCv}><Download /><span>Download</span></span></li>
             </ul>
         </>
     )

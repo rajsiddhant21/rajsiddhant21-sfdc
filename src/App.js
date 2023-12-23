@@ -27,6 +27,9 @@ function reducer(state, action) {
         return { ...state, ...action.payload, scrolldirection: 'up' }
       }
     }
+    case 'alert': {
+      return { ...state, alert: false }
+    }
 
     default:
       throw new Error('Unknown Action')
@@ -39,6 +42,7 @@ const initialState = {
   stateactive: false,
   scroll: 0,
   scrolldirection: '',
+  alert: true
 }
 
 function App() {
