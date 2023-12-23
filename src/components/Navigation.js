@@ -22,17 +22,27 @@ function Navigation({ state, dispatch }) {
         window.open(state?.cvpdfurl, '_blank')
     }
     return (
-        <div className={styles.navContainer}>
-            <ul className={styles.nav} onClick={handleTabChange}>
-                <li data-tabname="home" className={state.activeTab === 'home' ? styles.active : ''}>Home</li>
-                {/* <li data-tabname="aboutme" className={state.activeTab === 'aboutme' ? styles.active : ''}>About Me</li> */}
-                <li data-tabname="workex" className={state.activeTab === 'workex' ? styles.active : ''}>Work Ex</li>
-                <li data-tabname="skillsused" className={state.activeTab === 'skillsused' ? styles.active : ''}>Skills Used</li>
-                {/* <li data-tabname="education" className={state.activeTab === 'education' ? styles.active : ''}>Education</li> */}
-                <li data-tabname="contact" className={state.activeTab === 'contact' ? styles.active : ''}>Contact</li>
-            </ul>
-            <span className={styles.downloadSpan} onClick={handleDownloadCv}><Download /><span>Download</span></span>
-        </div>
+        <>
+            <div className={styles.navContainer}>
+                <ul className={styles.nav} onClick={handleTabChange}>
+                    <li data-tabname="home" className={state.activeTab === 'home' ? styles.active : ''}>Home</li>
+                    {/* <li data-tabname="aboutme" className={state.activeTab === 'aboutme' ? styles.active : ''}>About Me</li> */}
+                    <li data-tabname="workex" className={state.activeTab === 'workex' ? styles.active : ''}>Work Ex</li>
+                    <li data-tabname="skillsused" className={state.activeTab === 'skillsused' ? styles.active : ''}>Skills Used</li>
+                    {/* <li data-tabname="education" className={state.activeTab === 'education' ? styles.active : ''}>Education</li> */}
+                    <li data-tabname="contact" className={state.activeTab === 'contact' ? styles.active : ''}>Contact</li>
+                </ul>
+                <span className={styles.downloadSpan} onClick={handleDownloadCv}><Download /><span>Download</span></span>
+            </div>
+            <div className={styles.navContainerMobile}>
+                <div className={styles.menuClose}>
+
+                </div>
+                <div className={styles.menuOpen}>
+
+                </div>
+            </div>
+        </>
     )
 }
 

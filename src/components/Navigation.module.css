@@ -26,3 +26,16 @@
 .active {
   color: #c26dbc !important;
 }
+
+.navContainerMobile {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .navContainer {
+    display: none;
+  }
+  .navContainerMobile {
+    display: block;
+  }
+}

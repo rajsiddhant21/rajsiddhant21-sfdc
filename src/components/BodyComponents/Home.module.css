@@ -93,3 +93,31 @@
 .sticky {
   position: sticky;
 }
+.detailHeading {
+  display: block;
+}
+.detailHeadingMobile {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .homeWorkEx {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .bodyContent {
+    flex-direction: column;
+  }
+  .homeHeader {
+    flex-direction: column;
+  }
+  .detailHeading {
+    display: none;
+  }
+  .detailHeadingMobile {
+    display: block;
+  }
+  .detailHeadingMobile p {
+    display: flex;
+  }
+}
