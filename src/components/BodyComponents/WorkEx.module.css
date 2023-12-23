@@ -22,7 +22,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 .desc div:nth-child(1) {
   flex: 6;
@@ -50,5 +49,11 @@
   }
   100% {
     color: red;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .desc {
+    flex-direction: column;
   }
 }

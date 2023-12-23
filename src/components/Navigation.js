@@ -1,10 +1,11 @@
 import styles from './Navigation.module.css';
 import { Button } from '@mui/material';
 import { Download } from '@mui/icons-material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 function Navigation({ state, dispatch }) {
     // const classW
     const [mobileMenu, setMobileMenu] = useState(false);
+    const [mobileMenuClass, setMobileMenuClass] = useState(styles.lines);
     function handleTabChange(e) {
         const tabname = e?.target?.dataset?.tabname;
 
@@ -17,6 +18,11 @@ function Navigation({ state, dispatch }) {
             })
         }
 
+        if (mobileMenu === true) {
+            setMobileMenu(false);
+            setMobileMenuClass(styles.lines)
+        }
+
     }
     function handleDownloadCv(e) {
         console.log(state.cvpdfurl)
@@ -27,7 +33,19 @@ function Navigation({ state, dispatch }) {
         setMobileMenu((e) => {
             return !e;
         })
+
+        setMobileMenuClass((curr) => {
+            if (curr === styles.cross) {
+                return styles.lines
+            } else if (curr === styles.lines) {
+                return styles.cross;
+            }
+        })
     }
+
+    useEffect(function () {
+
+    }, [setMobileMenuClass, mobileMenuClass])
 
     return (
         <>
@@ -43,7 +61,7 @@ function Navigation({ state, dispatch }) {
                 <span className={styles.downloadSpan} onClick={handleDownloadCv}><Download /><span>Download</span></span>
             </div>
             <div className={styles.navContainerMobile}>
-                <div className={styles.menuClose + ' ' + (mobileMenu ? styles.cross : styles.lines)} onClick={handleMobileMenu}>
+                <div className={styles.menuClose + ' ' + mobileMenuClass} onClick={handleMobileMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
