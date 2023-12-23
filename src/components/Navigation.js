@@ -1,9 +1,10 @@
 import styles from './Navigation.module.css';
 import { Button } from '@mui/material';
 import { Download } from '@mui/icons-material';
+import { useState } from 'react';
 function Navigation({ state, dispatch }) {
     // const classW
-
+    const [mobileMenu, setMobileMenu] = useState(false);
     function handleTabChange(e) {
         const tabname = e?.target?.dataset?.tabname;
 
@@ -21,6 +22,13 @@ function Navigation({ state, dispatch }) {
         console.log(state.cvpdfurl)
         window.open(state?.cvpdfurl, '_blank')
     }
+
+    function handleMobileMenu() {
+        setMobileMenu((e) => {
+            return !e;
+        })
+    }
+
     return (
         <>
             <div className={styles.navContainer}>
@@ -35,11 +43,13 @@ function Navigation({ state, dispatch }) {
                 <span className={styles.downloadSpan} onClick={handleDownloadCv}><Download /><span>Download</span></span>
             </div>
             <div className={styles.navContainerMobile}>
-                <div className={styles.menuClose}>
-
+                <div className={styles.menuClose + ' ' + (mobileMenu ? styles.cross : styles.lines)} onClick={handleMobileMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <div className={styles.menuOpen}>
-
+                    {mobileMenu && 'hello'}
                 </div>
             </div>
         </>
