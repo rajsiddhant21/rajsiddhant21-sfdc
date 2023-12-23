@@ -48,10 +48,25 @@ function Navigation({ state, dispatch }) {
                     <span></span>
                     <span></span>
                 </div>
-                <div className={styles.menuOpen}>
-                    {mobileMenu && 'hello'}
-                </div>
+                {mobileMenu && <div className={styles.menuOpen}>
+                    {<MobileNavItemns onhandleTabChange={handleTabChange} state={state} />}
+                </div>}
             </div>
+        </>
+    )
+}
+
+function MobileNavItemns({ onhandleTabChange, state }) {
+    return (
+        <>
+            <ul onClick={onhandleTabChange}>
+                <li data-tabname="home" className={state.activeTab === 'home' ? styles.active : ''}>Home</li>
+                {/* <li data-tabname="aboutme" className={state.activeTab === 'aboutme' ? styles.active : ''}>About Me</li> */}
+                <li data-tabname="workex" className={state.activeTab === 'workex' ? styles.active : ''}>Work Ex</li>
+                <li data-tabname="skillsused" className={state.activeTab === 'skillsused' ? styles.active : ''}>Skills Used</li>
+                {/* <li data-tabname="education" className={state.activeTab === 'education' ? styles.active : ''}>Education</li> */}
+                <li data-tabname="contact" className={state.activeTab === 'contact' ? styles.active : ''}>Contact</li>
+            </ul>
         </>
     )
 }

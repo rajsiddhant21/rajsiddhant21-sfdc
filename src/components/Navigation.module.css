@@ -82,6 +82,16 @@
   animation-fill-mode: forwards;
 }
 
+.menuOpen {
+  margin-top: 10px;
+  background-color: #4c5270;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  width: 60%;
+  z-index: 5;
+}
+
 @media screen and (max-width: 650px) {
   .navContainer {
     display: none;
