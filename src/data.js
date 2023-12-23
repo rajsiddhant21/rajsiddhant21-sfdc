@@ -57,7 +57,7 @@ const data = {
         "location": "Asansol,West Bengal",
         "score": "87%",
         "stream": "1-10 ICSE",
-        "start": "TBC",
+        "start": "2004",
         "end": "2014"
     }
 }
