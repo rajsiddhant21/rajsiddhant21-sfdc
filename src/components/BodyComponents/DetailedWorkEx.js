@@ -2,21 +2,21 @@ import { useEffect, useState } from 'react'
 import styles from './DetailedWorkEx.module.css'
 import Pagination from './Pagination'
 function DetailedWorkEx({ state }) {
-    let ht = 0.4 * (window.innerHeight)
+    // let ht = 0.4 * (window.innerHeight)
     return (
         <div className={styles.workexdetail}>
             <div className={styles.workexdesc}>
-                <div className={styles.salescloud + ' ' + styles.staticHeight} style={{ height: ht + 'px' }}>
+                <div className={styles.salescloud + ' ' + styles.staticHeight}>
                     <div className={styles.expBgAlpha}>
                         <WorkExDesc project="project1" state={state} />
                     </div>
                 </div>
-                <div className={styles.expcloud1 + ' ' + styles.staticHeight} style={{ height: ht + 'px' }}>
+                <div className={styles.expcloud1 + ' ' + styles.staticHeight}>
                     <div className={styles.expBgAlpha}>
                         <WorkExDesc project="project2" state={state} />
                     </div>
                 </div>
-                <div className={styles.expcloud2 + ' ' + styles.staticHeight} style={{ height: ht + 'px' }}>
+                <div className={styles.expcloud2 + ' ' + styles.staticHeight}>
                     <div className={styles.expBgAlpha}>
                         <WorkExDesc project="project3" state={state} />
                     </div>

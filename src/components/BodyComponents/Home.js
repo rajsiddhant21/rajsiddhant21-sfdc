@@ -42,8 +42,11 @@ function Home({ state, dispatch }) {
                 <div>
                     <p>Accenture:</p>
                     <p>{state.accenture}</p>
+                    <div className={styles.detailHeadingMobile}>
+                        <p onClick={workEx}><span>Detailed Work Ex.</span> <ArrowRight /></p>
+                    </div>
                 </div>
-                <div>
+                <div className={styles.detailHeading}>
                     <p onClick={workEx}><span>Detailed Work Ex.</span> <ArrowRight /></p>
                 </div>
             </div>
@@ -69,11 +72,6 @@ function Home({ state, dispatch }) {
                     <p>{state.schoolsmall?.name}</p>
                     <p>{state.schoolsmall?.location}</p>
                 </div>
-            </div>
-            <div style={{ height: '100px' }}>
-
-                Thankewww
-
             </div>
         </div >
     )
