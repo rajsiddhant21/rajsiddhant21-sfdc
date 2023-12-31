@@ -55,7 +55,7 @@ const data = {
     "schoolsmall": {
         "name": "St.Vincent's High School",
         "location": "Asansol,West Bengal",
-        "score": "87%",
+        "score": "69%",
         "stream": "1-10 ICSE",
         "start": "2004",
         "end": "2014"
