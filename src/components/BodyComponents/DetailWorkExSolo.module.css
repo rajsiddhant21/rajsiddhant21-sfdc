@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap");
+.workexdetail {
+}
+.salescloud {
+  background: url("../../../public/sfdc4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.expcloud1 {
+  background: url("../../../public/sfdc5.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.expcloud2 {
+  background: url("../../../public/sfdc2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.staticHeight {
+  margin: 1rem 0;
+}
+
+.staticHeight .expBgAlpha {
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6fr 1fr;
+}
+.staticHeight {
+  color: #fff;
+}
+.workDesc {
+  padding: 1rem 1rem;
+  text-justify: auto;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  text-align: center;
+  font-size: 21px;
+  background: rgba(0, 0, 0, 0.6);
+}
