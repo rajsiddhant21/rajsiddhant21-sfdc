@@ -1,0 +1,21 @@
+.container{
+    border: 0.7px solid #e1e0e0;
+    padding: 1rem;
+    transition: height;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.downArrow{
+    cursor: pointer;
+}
+
+@keyframes heightManage {
+    0%{
+        border: 1px;
+    }
+    100%{
+        border: 5px;;
+    }
+}

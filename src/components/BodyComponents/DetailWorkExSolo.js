@@ -3,15 +3,23 @@ import { useEffect, useState } from 'react'
 import Pagination from './Pagination'
 import { Co2Sharp } from '@mui/icons-material';
 function DetailedWorkExSolo({state}){
+    const numProjects = state.numProjects;
     return (
         <div className={styles.workexdetail}>
             <div className={styles.workexdesc}>
-                <div className={styles.salescloud + ' ' + styles.staticHeight}>
-                    <div className={styles.expBgAlpha}>
-                        <WorkExDesc project="project1" state={state} />
-                    </div>
-                </div>
-                <div className={styles.expcloud1 + ' ' + styles.staticHeight}>
+                {Array.from({length:numProjects},(xx,i)=>i+1).map((x)=>{
+                    const pStr = "project"+x;
+                    return (
+                        <><div className={styles.salescloud + ' ' + styles.staticHeight}>
+                        <div className={styles.expBgAlpha}>
+                            <WorkExDesc project={pStr} state={state} />
+                        </div>
+                    </div></>
+                    )
+                })
+                }
+               
+                {/* <div className={styles.expcloud1 + ' ' + styles.staticHeight}>
                     <div className={styles.expBgAlpha}>
                         <WorkExDesc project="project2" state={state} />
                     </div>
@@ -20,7 +28,7 @@ function DetailedWorkExSolo({state}){
                     <div className={styles.expBgAlpha}>
                         <WorkExDesc project="project3" state={state} />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -2,7 +2,9 @@ const datalocal = {
     accenture: `In my job as a Salesforce developer, I start each day by planning my tasks and checking messages.Then, I spend most of my day writing code for different business needs and talking with the business and analysts to make sure I understand what they want.If something isn't possible technically or time limitation, I figure out a way around it. I also help my team members with any problems they're having and review their work.I spend time learning and reading about Salesforce development and developer guide.I attend meetings with my team to discuss progress and plans.At the end of the day, I review what I've done, update my progress, and get ready for the next day, always staying flexible and ready for changes.`,
     "projects":[
         {
-            name:"Cisco",
+            "name":"Cisco",
+            "index":0,
+            "numProjects":3,
             "project1": {
                 "team1": ` I built a Visualforce (VF) page and its controller in Salesforce. This page helps users go to an external website. I also created an Apex REST class that updates opportunities based on conditions in a JSON input. Additionally, I made console application navigation(sub-tabs) possible using Aura Components.`,
                 "team2": `I worked here for Defect Fixes mostly`,
@@ -18,6 +20,14 @@ const datalocal = {
             },
             "project3": {
                 "team1": `Teaming up with a developer, we started this CMS project with a thorough analysis of the existing system. My role centered around communicating with various teams about the APIs and collaborating with businesses to refine user stories. I designed a comprehensive low-level component framework using Lightning Web Components (LWC), comprising around 11 to 12 components. One significant achievement was enabling the seamless upload of media binary files from Salesforce to another server, particularly storage spaces. Alongside coding in JavaScript and Apex, I conducted multiple Proof of Concepts (POCs) with diverse teams to ensure smooth communication between systems. Additionally, I played a supportive role in getting new team members upto speed. Currently, my focus is on defining the lifecycle that the records will undergo depending the the logged In user role.`
+            }
+        },
+        {
+            "name":"Hewlett Packard Enterprise",
+            "index":1,
+            numProjects:1,
+            "project1":{
+                "team1":""
             }
         }
     ],
