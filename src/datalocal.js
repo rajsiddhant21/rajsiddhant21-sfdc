@@ -31,7 +31,7 @@ const datalocal = {
             "index":1,
             numProjects:1,
             "project1":{
-                "team1":"During my tenure, I focused on developing Aura components and worked on an existing custom approval process, which served as an abstraction layer for the actual approval process, while also incorporating various other features. Additionally, I engaged in the conversion of an established legacy Visualforce page and its associated components into Lightning Web Components (LWC). This transition enabled the integration of validations previously housed in Apex into LWC, effectively reducing the character limit of the existing Apex codebase."
+                "team1":"Presently I'm focused on developing Aura components and worked on an existing custom approval process, which served as an abstraction layer for the actual approval process, while also incorporating various other features. Additionally, I engaged in the conversion of an established legacy Visualforce page and its associated components into Lightning Web Components (LWC). This transition enabled the integration of validations previously housed in Apex into LWC, effectively reducing the character limit of the existing Apex codebase."
             }
         }
     ],
