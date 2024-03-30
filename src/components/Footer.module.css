@@ -3,3 +3,31 @@
   min-height: 10vh;
   border-radius: 10px;
 }
+.footer p{
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.certModal{
+  position: fixed;
+  top: 2%;
+  height: 100vh;
+  z-index: 99;
+  width: 98vw;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.certModal div{
+  height: fit-content;
+  width: 30%;
+  text-align: center;
+  color: black;
+  background-color: #F4EAE6;
+  text-align: justify;
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid red;
+}
