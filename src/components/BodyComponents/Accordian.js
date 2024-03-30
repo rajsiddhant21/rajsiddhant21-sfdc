@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Accordian.module.css';
 import { Remove,Add } from '@mui/icons-material';
-function Accordian({children,heading,position}){
+function Accordian({children,heading,position,startdate,enddate}){
     console.log(heading,position)
     const [open,setOpen] = useState(position === 0);
 
@@ -13,7 +13,7 @@ function Accordian({children,heading,position}){
         <>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <p>{heading}</p>
+                    <p>{heading} (<span>{startdate}</span> - <span>{enddate}</span>)</p>
                     <p className={styles.downArrow} onClick={handleAccordianChange}>
                         {open?<Remove/>:<Add></Add>}
                         </p>

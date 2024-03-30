@@ -2,6 +2,8 @@ const datalocal = {
     accenture: `In my job as a Salesforce developer, I start each day by planning my tasks and checking messages.Then, I spend most of my day writing code for different business needs and talking with the business and analysts to make sure I understand what they want.If something isn't possible technically or time limitation, I figure out a way around it. I also help my team members with any problems they're having and review their work.I spend time learning and reading about Salesforce development and developer guide.I attend meetings with my team to discuss progress and plans.At the end of the day, I review what I've done, update my progress, and get ready for the next day, always staying flexible and ready for changes.`,
     "projects":[
         {
+            "startdate":"Dec-2020",
+            "enddate":"Jan-2024",
             "name":"Cisco",
             "index":0,
             "numProjects":3,
@@ -14,7 +16,7 @@ const datalocal = {
                 "team6": `I've developed batch classes that automatically create opportunities based on condition from a certain object's record. Additionally, I implemented a logging mechanism to capture and record any errors that may occur during the insertion process. This ensures that any issues are documented for easy identification and resolution.`,
             },
             "project2": {
-                "team1": `I played a key role in the Sales Connect project, where we brought an existing system into the Experience Cloud. My main responsibilities included creating and managing four different Objects, setting up their fields and profiles, and establishing validation rules. I also designed a trigger framework and implemented validation using triggers.In addition to this, I worked on out-of-the-box components in the Experience Cloud, wrote batch classes, and developed an API known as the authorization service. With my team, I found a solution for admin users to share images from the library with community users, created an automated process for generating authenticated URLs, and implemented Telium tagging to track user interactions on the website.Furthermore, I made the components mobile-responsive, added a light/dark theme to the site homepage, and wrote extensive code in CSS, JS, and Apex. I also provided CSS support to stakeholders' developers.
+                "team1": `I played a key role in the Sales Connect project, where we brought an existing system into the Experience Cloud. My main responsibilities included creating and managing four different Objects, setting up their fields and profiles, and establishing validation rules. I also designed a trigger framework and implemented validation using triggers.In addition to this, I worked on out-of-the-box components in the Experience Cloud, wrote batch classes, and developed an API known as the authorization service. With my team, I found a solution for admin users to share images from the library with community users, created an automated process for generating authenticated URLs, and implemented Telium tagging to track user interactions on the website.Furthermore, I made the components mobile-responsive, added a light/dark theme to the site homepage, and wrote extensive code in CSS, JS, and Apex. I also provided CSS support to stakeholder's developers.
                 
                 `
             },
@@ -23,11 +25,13 @@ const datalocal = {
             }
         },
         {
+            "startdate":"Feb-2024",
+            "enddate":"present",
             "name":"Hewlett Packard Enterprise",
             "index":1,
             numProjects:1,
             "project1":{
-                "team1":""
+                "team1":"During my tenure, I focused on developing Aura components and worked on an existing custom approval process, which served as an abstraction layer for the actual approval process, while also incorporating various other features. Additionally, I engaged in the conversion of an established legacy Visualforce page and its associated components into Lightning Web Components (LWC). This transition enabled the integration of validations previously housed in Apex into LWC, effectively reducing the character limit of the existing Apex codebase."
             }
         }
     ],

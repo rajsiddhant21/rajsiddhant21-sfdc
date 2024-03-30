@@ -1,11 +1,15 @@
 .container{
     border: 0.7px solid #e1e0e0;
     padding: 1rem;
-    transition: height;
+    transition: height 1s;
+    max-height: fit-content;
 }
 .header{
     display: flex;
     justify-content: space-between;
+    font-family: monospace;
+    font-size: 22px;
+    text-decoration: underline;
 }
 .downArrow{
     cursor: pointer;

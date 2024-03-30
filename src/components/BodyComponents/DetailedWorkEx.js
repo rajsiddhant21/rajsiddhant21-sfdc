@@ -7,7 +7,7 @@ function DetailedWorkEx({ state }) {
         {state?.projects?.map((x)=>{
             return <>
              <div style={{margin:'10px'}}>
-                 <Accordion heading={x.name} position={x.index}>
+                 <Accordion heading={x.name} position={x.index} startdate={x.startdate} enddate={x.enddate}>
                     <DetailedWorkExSolo state={x}/>
                  </Accordion>
              </div>
