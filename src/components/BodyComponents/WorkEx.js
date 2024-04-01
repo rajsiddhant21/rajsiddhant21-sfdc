@@ -80,7 +80,7 @@ function HighLevelTile({ state, keyexp, keyexph }) {
         <div className={styles.tile}>
             <h4>{headerSplit[0]}</h4>
             <div className={styles.desc}>
-                <div>{parse(state.experience1)}</div>
+                <div>{parse(state[keyexp])}</div>
                 <div ref={datesExp} className={styles.dateExp}>{headerSplit[2]}</div>
             </div>
         </div>
