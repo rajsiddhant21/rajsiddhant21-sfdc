@@ -35,7 +35,7 @@ const data = {
     "experience1": `<ul>
     <li>My major work here is to work on aura components related to custom approval process (abstraction on actual approval process) and along with it is to convert Vf pages to lwc components with an improved performance speedwise and validations optimization.</li>
     <li>My major work here was to build solutions on experience cloud using salesforce OOB components (less) and custom lightning components (more), I&#39;ve extensively written CSS, JS, Apex classes, Rest Apis, Batch Classes, Triggers, and HTTP callouts. I along with one of my colleagues was able to identify security issues in the system and able to resolve them, I have also helped team members with logic-building and coding problems to meet deliverables</li><li>My Major work here is to design a component skeleton using LWC and implement state management across those components I also worked on integrating Salesforce with two different storage spaces where I transfer files uploaded from salesforce directly to the storage system, I also worked on a POC for Bulk Approval process via apex </li></ul>`,
-    "cvpdfurl": "https://empathetic-panda-tmx0kp-dev-ed.trailblaze.file.force.com/sfc/dist/version/download/?oid=00D2w00000GWHJ2&ids=0682w00000WDSXE&d=%2Fa%2F2w000001AfhP%2FPRclZqmgEV0n8FV0N2BbkuBEn45DELSiWYBLBY316lU&asPdf=true",
+    "cvpdfurl": "https://curious-unicorn-eyveva-dev-ed.trailblaze.file.force.com/sfc/dist/version/download/?oid=00D5h000008jdoU&ids=0685h00000TfYVC&d=%2Fa%2F5h000000HLuA%2FMHSPQNIhodM.wF2ybdJZo51i0y56Ks1ZsqLxSr6WM.k&asPdf=false",
     "badges": "154",
     "points": "161,575",
     "college": {
