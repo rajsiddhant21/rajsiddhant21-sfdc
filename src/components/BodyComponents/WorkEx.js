@@ -41,47 +41,70 @@ function WorkEx({ state, dispatch }) {
 }
 
 function HighLevelTile({ state, keyexp, keyexph }) {
-
+    
     const headerSplit = state[keyexph].split('\r\n');
+    console.log(headerSplit)
     const datesExp = useRef(null);
     useEffect(function () {
         let timerid = null;
         let localScroll = -1;
-        const scrollHandler = () => {
-            //    console.log(timerid)
+        // const scrollHandler = () => {
+        //     //    console.log(timerid)
 
-            clearTimeout(timerid)
-            timerid = setTimeout(() => {
-                //      console.log(localScroll, window.scrollY);
-                if (localScroll < window.scrollY) {
-                    //styleDates.transform = `translateY(${20}px)`;
-                    if (datesExp.current)
-                        datesExp.current.style.transform = `translateY(${25}px)`;
-                } else {
-                    if (datesExp.current)
-                        datesExp.current.style.transform = `translateY(-${35}px)`;
+        //     clearTimeout(timerid)
+        //     timerid = setTimeout(() => {
+        //         //      console.log(localScroll, window.scrollY);
+        //         if (localScroll < window.scrollY) {
+        //             //styleDates.transform = `translateY(${20}px)`;
+        //             if (datesExp.current)
+        //                 datesExp.current.style.transform = `translateY(${25}px)`;
+        //         } else {
+        //             if (datesExp.current)
+        //                 datesExp.current.style.transform = `translateY(-${35}px)`;
+        //         }
+        //         localScroll = window.scrollY;
+        //     }, 10)
+        // }
+        // window.addEventListener('scroll', scrollHandler)
+
+        let callback = (entries)=>{
+            entries.forEach((entry)=>{
+                const target = entry.target;
+                target.style.backgroundColor = `rgba(${Math.round(Math.random()*255)},${Math.round(Math.random()*255)},${Math.round(Math.random()*255)})`
+                if(entry.isIntersecting){
+                    
+                }else if(!entry.isIntersecting){
+
                 }
-                localScroll = window.scrollY;
-            }, 10)
+            })
         }
-        window.addEventListener('scroll', scrollHandler)
+        let observer = new IntersectionObserver(callback);
+
+        // fetch all 3
+        const targets = document.querySelectorAll(`[data-datesel="${headerSplit[1]}"]`);
+        console.log(targets)
+        targets.forEach((target)=>{
+            observer.observe(target);
+        })
+        
+
         return () => {
-            window.removeEventListener('scroll', scrollHandler)
+            // window.removeEventListener('scroll', scrollHandler)
         }
-    }, [])
+    }, [datesExp])
 
     useEffect(function () {
         return () => {
 
         }
-    })
+    },[])
 
     return (
         <div className={styles.tile}>
             <h4>{headerSplit[0]}</h4>
             <div className={styles.desc}>
                 <div>{parse(state[keyexp])}</div>
-                <div ref={datesExp} className={styles.dateExp}>{headerSplit[2]}</div>
+                <div ref={datesExp} className={styles.dateExp} data-datesel={headerSplit[1]}>{headerSplit[2]}</div>
             </div>
         </div>
     )
